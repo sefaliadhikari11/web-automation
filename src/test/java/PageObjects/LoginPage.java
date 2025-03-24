@@ -37,9 +37,10 @@ WebDriver driver;
        driver.findElement(loginButton).click();
    }
    
-   public void getErrorMessage() {
+   public String getErrorMessage() {
 	   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-	   wait.until(ExpectedConditions.visibilityOfElementLocated(errMessage));
+	   String msg = wait.until(ExpectedConditions.visibilityOfElementLocated(errMessage)).getText();
+	   return msg;
    }
 
 }

@@ -26,8 +26,9 @@ public class TestLoginPage extends BaseTest {
         loginPage.enterUsername("Admin");
         loginPage.enterPassword("admin1234");
         loginPage.clickLoginButton();
-        loginPage.getErrorMessage();
-        //System.out.println(message);
+        String errMessage = loginPage.getErrorMessage();
+        System.out.println(errMessage);
+        Assert.assertEquals(errMessage, "Invalid credentials");
         
 	}
 
