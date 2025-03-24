@@ -1,1 +1,7 @@
-/target/
+web-automation/target/
+.idea/
+*.iml
+*.class
+.classpath
+.project
+.settings/
